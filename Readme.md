@@ -18,64 +18,64 @@ The offering is Renting servers
 <h2>VMs on AWS are called EC2 Servers<br>
 EC2 stands for Elastic compute Version 2.</h2>
 
-- 1.Elastic - Can increase/decrease the size of the machine
-- 2.Compute - It is a machine
+1. Elastic - Can increase/decrease the size of the machine
+2. Compute - It is a machine
 You can spin up a new EC2 instance from the aws dashboard
 
 <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F085e8ad8-528e-47d7-8922-a23dc4016453%2Ff0ee3fa6-e989-4982-a580-e8039c48ae62%2FScreenshot_2024-02-11_at_6.33.46_AM.png?table=block&id=3dc2315f-4c68-4d34-995e-c56ba0d08feb&cache=v2" alt="EC2">
 
 ## 3.Creating a new EC2 server
 
-- 1.Click on Launch a new instance
+1. Click on Launch a new instance
 
 <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F085e8ad8-528e-47d7-8922-a23dc4016453%2Fce12b6eb-5d32-4cfa-bf79-049356382237%2FScreenshot_2024-02-11_at_6.35.37_AM.png?table=block&id=62284127-f634-49e1-8372-ae190cbe5e53&cache=v2" alt="">
 
-- 2.Give a name 
+2. Give a name 
 
 <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F085e8ad8-528e-47d7-8922-a23dc4016453%2F99db06f8-46b8-4724-97b0-edf8eceddc2a%2FScreenshot_2024-02-11_at_6.40.08_AM.png?table=block&id=dc8d9b86-099f-43d9-b591-b73fba177838&cache=v2" alt="">
 
-- 3.Select an OS
+3. Select an OS
 
 <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F085e8ad8-528e-47d7-8922-a23dc4016453%2F3d164ebc-9528-40fe-a313-669a9346657e%2FScreenshot_2024-02-11_at_6.40.15_AM.png?table=block&id=1b5a057c-15c7-4306-9c7c-b777110ce930&cache=v2" alt="">
 
-- 4.Select size
+4. Select size
 
 <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F085e8ad8-528e-47d7-8922-a23dc4016453%2F4fad1e6c-5929-4619-87c9-6dd50bc4dc79%2FScreenshot_2024-02-11_at_6.41.19_AM.png?table=block&id=688a2e65-4d63-4976-a9e8-9b0a64038ae5&cache=v2" alt="">
 
-- 5.Create a new Key pair
+5. Create a new Key pair
 
 <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F085e8ad8-528e-47d7-8922-a23dc4016453%2Fb988d06e-447a-476f-9599-b1b98a561f11%2FScreenshot_2024-02-11_at_6.42.11_AM.png?table=block&id=1f313b84-ebcc-4ac1-a118-7abcd4f33e13&cache=v2" alt="">
 
 
-- 6.Select size
+6. Select size
 
 <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F085e8ad8-528e-47d7-8922-a23dc4016453%2F4f28c0ac-7f35-4200-a0e6-21df5ac982b3%2FScreenshot_2024-02-11_at_6.38.05_AM.png?table=block&id=f32975d3-a6ee-4a3b-a666-33eb338ff4fe&cache=v2" alt="">
 
-- 7.Allow traffic on http/https
+7. Allow traffic on http/https
 
 <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F085e8ad8-528e-47d7-8922-a23dc4016453%2Faa98e7a1-aedf-4a1a-8e53-edb938b1b476%2FScreenshot_2024-02-11_at_6.37.57_AM.png?table=block&id=7f497c85-0715-467d-adcf-1bfc99fe7791&cache=v2" alt="">
 
 ## 4.SSH into server
 (In your terminal)
-- 1.Give ssh key  permission
+1. Give ssh key  permission
 chmod 700 web-dev.pem
 
-- 2.ssh into machine
+2. ssh into machine
 ssh -i web-dev.pem ubuntu@ec2-65-0-180-32.ap-south-1.compute.amazonaws.com
 
---  https://www.tecmint.com/resolve-temporary-failure-in-name-resolution/
+-- https://www.tecmint.com/resolve-temporary-failure-in-name-resolution/
 
-- 3.Clone your repo
+3. Clone your repo
 git clone https://github.com/web-dev
 
-- 4.Install node.js
+4. Install node.js
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
 
-- 5.Install all dependencies
+5. Install all dependencies
 cd web-dev
 npm install
 
-- 6.Start backend
+6. Start backend
 node index.js
 
 ## 5.Try hitting the server
